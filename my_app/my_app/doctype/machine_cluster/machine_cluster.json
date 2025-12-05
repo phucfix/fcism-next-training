@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-12-05 11:59:33.292912",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_egzm",
+  "amended_from",
+  "naming_series",
+  "cluster_name",
+  "description",
+  "location",
+  "total_machines",
+  "status",
+  "machine_details",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_egzm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Machine Cluster",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "MC-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cluster_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cluster Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "total_machines",
+   "fieldtype": "Int",
+   "label": "Total Machines"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\\nMaintenance\\nFaulty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "machine_details",
+   "fieldtype": "Table",
+   "label": "Machine Details",
+   "options": "Machine Details"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "options": "Workflow State"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-05 13:17:26.424537",
+ "modified_by": "Administrator",
+ "module": "My App",
+ "name": "Machine Cluster",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

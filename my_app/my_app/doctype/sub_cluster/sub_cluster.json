@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-12-05 12:56:27.514307",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "parent_cluster",
+  "sub_cluster_name",
+  "description",
+  "machine_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "SC-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_cluster",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parent Cluster",
+   "options": "Machine Cluster",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_cluster_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sub Cluster Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "machine_count",
+   "fieldtype": "Int",
+   "label": "Machine Count"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-05 12:58:23.245876",
+ "modified_by": "Administrator",
+ "module": "My App",
+ "name": "Sub Cluster",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
