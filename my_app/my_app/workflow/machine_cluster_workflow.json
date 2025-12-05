@@ -1,0 +1,74 @@
+{
+ "name": "Machine Cluster Workflow",
+ "doctype": "Workflow",
+ "document_type": "Machine Cluster",
+ "is_active": 1,
+ "override_status": 1,
+ "send_email_alert": 0,
+ "workflow_name": "Machine Cluster Workflow",
+ "workflow_state_field": "workflow_state",
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "allow_edit": "Owner",
+   "is_optional_state": 0,
+   "next_action_email_template": null
+  },
+  {
+   "state": "Pending Approval",
+   "doc_status": "0",
+   "allow_edit": "Approver",
+   "is_optional_state": 0,
+   "next_action_email_template": null
+  },
+  {
+   "state": "Approved",
+   "doc_status": "1",
+   "allow_edit": "",
+   "is_optional_state": 0,
+   "next_action_email_template": null
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "2",
+   "allow_edit": "",
+   "is_optional_state": 0,
+   "next_action_email_template": null
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Submit for Approval",
+   "next_state": "Pending Approval",
+   "allowed": "Owner",
+   "allow_self_approval": 0,
+   "condition": ""
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Approve",
+   "next_state": "Approved",
+   "allowed": "Approver",
+   "allow_self_approval": 0,
+   "condition": ""
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "Approver",
+   "allow_self_approval": 0,
+   "condition": ""
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Send Back",
+   "next_state": "Draft",
+   "allowed": "Approver",
+   "allow_self_approval": 0,
+   "condition": ""
+  }
+ ]
+}
